@@ -1,0 +1,62 @@
+﻿<Page x:Name="MainPage" AllowDrop="True"
+    x:Class="SolitaireChess.Board"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SolitaireChess"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ExpInteractivity="clr-namespace:Microsoft.Expression.Interactivity.Layout;assembly=Microsoft.Expression.Interactions"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    mc:Ignorable="d" DragOver="Page_DragOver">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="BackButton" Icon="Back" Label="Menu" Click="BackButton_Click"/>
+            <AppBarButton x:Name="UndoButton" Icon="Undo" Label="Undo" Click="undoButton_Click"/>
+            <AppBarButton x:Name="RedoButton" Icon="Redo" Label="appbarbutton" Click="RedoButton_Click" Visibility="Collapsed"/>
+            <AppBarButton x:Name="ResetButton" Icon="Refresh" Label="Reset" Click="ResetButton_Click"/>
+            <AppBarButton x:Name="PauseButton" Icon="Pause" Label="Pause" Click="PauseButton_Click"/>
+            <AppBarButton x:Name="HintButton" Icon="Repair" Label="Hint" Click="HintButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="MainGrid" AllowDrop="True">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA0A000" Offset="0"/>
+                <GradientStop Color="#FF0C4435" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid AllowDrop="True" x:Name="BoardGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!--<Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            -->
+
+            <!--<Rectangle AllowDrop="True" x:Name="b2" Grid.Column="1" Height="85" Grid.Row="2" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="b2_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="b4" Grid.Column="1" Height="85" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="b4_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="c4" Grid.Column="2" Height="85" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="c4_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="d4" Grid.Column="3" Height="85" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="d4_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="a3" Height="85" Grid.Row="1" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="a3_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="b3" Grid.Column="1" Height="85" Grid.Row="1" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="b3_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="c3" Grid.Column="2" Height="85" Grid.Row="1" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="c3_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="d3" Grid.Column="3" Height="85" Grid.Row="1" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="d3_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="a2" Height="85" Grid.Row="2" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="a2_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="c2" Grid.Column="2" Height="85" Grid.Row="2" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="c2_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="d2" Grid.Column="3" Height="85" Grid.Row="2" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="d2_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="a1" Height="85" Grid.Row="3" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="a1_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="b1" Grid.Column="1" Height="85" Grid.Row="3" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="b1_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="c1" Height="85" Stroke="Black" Width="85" Grid.Column="2" Grid.Row="3" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="White" Drop="c1_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="d1" Grid.Column="3" Height="85" Grid.Row="3" Stroke="Black" Width="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Drop="d1_Drop"/>
+            <Rectangle AllowDrop="True" x:Name="a4" Stroke="Black" Height="85" ScrollViewer.VerticalScrollBarVisibility="Disabled" Fill="#FF1B1B97" Width="85" Drop="a4_Drop"/> -->
+        </Grid>
+    </Grid>
+</Page>
